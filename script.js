@@ -1,6 +1,10 @@
 //complete this code
 class Rectangle {
 	constructor(width, height) {
+		if(width<0 || height<0){
+		  throw new Error("Width and height must be positive values.");
+			
+		}
         this._width = width;
         this._height = height;
     }
@@ -17,10 +21,13 @@ class Rectangle {
 
 class Square extends Animal {
 	constructor(side) {
+		if(side<0){
+			throw new error("give me positive value")
+		}
         super(side, side); 
     }
-    getPerimeter(): number {
-        return 4 * this.width;
+    getPerimeter(){
+        return 4 * this._width;
     }
 }
 
